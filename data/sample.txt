@@ -1,0 +1,3 @@
+﻿This is a sample text file.
+It contains some free text that we want to process.
+The date today is August 8, 2025.
