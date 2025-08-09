@@ -18,6 +18,10 @@ def extract_data_with_ai(text_content):
     - Due Date
     - Total Amount
     
+    You MUST return the output as a valid JSON object. Do not include any explanatory text, 
+    markdown formatting, or any characters before or after the JSON object. Your entire response
+    should start with a '{{' and end with a '}}'.
+    
     If a piece of information is not found, use "N/A"
     
     Here is the text:
