@@ -13,16 +13,17 @@ def extract_data_with_ai(text_content):
     
     model = genai.GenerativeModel('gemini-1.5-flash-latest')
     prompt_text =f"""
-    From the following logistics document text, please extract the following:
-    - Invoice Number
-    - Due Date
-    - Total Amount
-    
+    Analyze the following logistics text. Your task is to extract these specific fields:
+    - "document_id": The main identifier, like an Invoice Number or Shipment ID.
+    - "contact_person": The name of any person mentioned as a contact or recipient.
+    - "special_requirements": Any special notes like "Forklift required" or temperature constraints.
+    - "due_date_or_deadline": Any mention of a due date or a delivery deadline.
+
     You MUST return the output as a valid JSON object. Do not include any explanatory text, 
     markdown formatting, or any characters before or after the JSON object. Your entire response
     should start with a '{{' and end with a '}}'.
-    
-    If a piece of information is not found, use "N/A"
+
+    If a field is not found, use the value "N/A".
     
     Here is the text:
     ---
